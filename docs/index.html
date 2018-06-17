@@ -1,18 +1,77 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
-<script type="text/javascript">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Girija's Slides</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAACwUlEQVQokS3QTU9TWRgA4Pd83M/SXm5bLNTWCjRBMXEQgy5caVxp2BjnP7jQtclk/sWsZjkxMTEazGRYOKNGE8LExKAGjRWQWghOSimUtvejPfec887G5yc8ZPfbKgBoAgCQaKWktkxHKUqRM2CDKOQcCQjEgcmQG4wDAABQBE3AMa1u1Gu2jmq1zXbzUCp1/eq1bDYzmkv3u0IoYTsmV4AMCABwBI5keWnp6ZOnQTdApRER4v6tn28Fx0KhZowmEkm9vkIpJVJzSh/+8WDp0WPPHfE9z7VNhfjm7VqpMn7/118mp09brqO15AqQAiBi77Dz+u/nt28s3l5cNKiWiejH/ZV/Z3/7/cGzv/68c/eeVhooo6g1ABCtmYbx0dyFM2cbtZohVc5lYWsvn+Llgp3EkUgGClAB4QoQAAgCRahWTmddb+XlC+j1uRG8ePXMTGfOVifLp4pyKJREMAjnKCn8uLo4f35i3L88P1cpZoPe9yuXLwUAJUVKM2eQYSKHI26KkyQmFDRlyHC6WhbJ8UTRAQxAyVw2P1ku73Y6ZsqRKC2tOocHPA5DBgZQTrihrdS79++j5s7MqVK7dVDb+irSH2YWLtpiQIVgDrU1kvW1ZcuyUGHYT5BYPO5VjHhjbXUYSTCtwCYRR55K53PjJ7MljpwPsucihZ1ueNQ7bO7szJXzQWODgR2Jzvrm9nB0Yl/A7MI5gUWbFSzC+eNN+8tWo3k8jPb35n28dqmKYbte32jsbeSmftpKpl5/aC03+67fXpjLuJZmjZM36x29fYDE9gft5vx0eYzJEROcgif9qX82sWnMNkShDWO7R91v7YgmxNZoQIKxYAexu7q+14+U451Il85/T7yP+6JFPMhUaG4qJoUwyfJEQrcbmpk8VQps//P2f5O9dnWMfOp1n9eOuX/BL1bDcMTLjcERunT4P13+dyWWGSxfAAAAAElFTkSuQmCC"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,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"
+    />
+    <link rel="alternate" href="https://gsswain.com/slides" />
+    <link rel="canonical" href="https://gsswain.com/slides" />
+    <meta name="description" content="Girija's Presentation/Session Slides" />
+    <meta name="keywords" content="Girija, Slides, Presentations, Sessions, HTTP2, webapp performance improvements" />
+    <style>
+        html {
+            font-family: Helvetica, sans-serif;
+            font-size: 100%;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
 
-function detectBrowser()
-{
-    var slashIndex = window.location.href.lastIndexOf("/");
-    var cropped = window.location.href.slice(0,slashIndex+1);
+        body {
+            color: white;
+            padding: 20px 10px;
+            margin: 0;
+            line-height: 1.5;
+        }
 
-    window.location.replace(cropped + "assets/player/KeynoteDHTMLPlayer.html");
-}
 
-</script>
+        h2 {
+            font-size: 2rem; 
+        }
 
-<body bgcolor="black" onload="detectBrowser()">
+        ul {
+            list-style-type: none;
+            font-size: medium;
+        }
+
+        a:visited,
+        a:active,
+        a {
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        @media screen and (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            h2 {
+                font-size: 1.4rem; 
+            }
+            a {
+                font-size: 1.2rem;
+            }
+        }
+
+    </style>
+</head>
+
+<body bgcolor="black">
+    <header>
+        <h2>Girija's Slides</h2>
+    </header>
+    <main>
+        <ul>
+            <li>
+                <a href="/webapp-performance/" title="Opens presentation">Improve WebApp Performance</a>
+            </li>
+        </ul>
+    </main>
 </body>
 
 </html>

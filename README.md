@@ -1,5 +1,5 @@
-# webapp-performance-improvements
+# slides
 
-This repo hosts a presentation using gihub pages and here is the URL
+This repo hosts presentation slides of sessions conducted by me.
 
 https://girija-shankar-swain.github.io/slides
